@@ -1,0 +1,10 @@
+<!--this is creating a view for our edit action that we created in the controller-->
+<div class="form-wrapper">
+  <%= simple_form_for @post, html: { class:'form-horizontal', multipart:true } do |f| %>
+      <div class="form-group"></div>
+      <%= f.input :image %>
+      <div class="form-group text-center"></div>
+      <%= f.input :caption %>
+      <%= f.button :submit, class: 'btn-success' %>
+      </div>
+  <% end %>

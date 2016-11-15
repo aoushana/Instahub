@@ -1,0 +1,16 @@
+<div class="posts-wrapper row"></div>
+  <div class="post"></div>
+  <div class="post-head"></div>
+  <div class="name"></div>
+
+  <div class="image center-block"></div>
+  <%= image_tag @post.image.url(:medium) %>
+  <p class="caption"></p>
+  <%= @post.caption %>
+  <div class="text-center"></div>
+  <%= link_to"Cancel", posts_path %>
+  <%= link_to "Edit Post", edit_post_path(@post) %>
+  <%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm:"Are you sure you want to
+  delete this post?"} %>
+
+<!--this shows the information that can be seen on our index view-->
